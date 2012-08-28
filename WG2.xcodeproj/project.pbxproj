@@ -20,6 +20,9 @@
 		69BEA17815ECC00300140956 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BEA15915ECC00300140956 /* Foundation.framework */; };
 		69BEA18015ECC00300140956 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69BEA17E15ECC00300140956 /* InfoPlist.strings */; };
 		69BEA18315ECC00400140956 /* WG2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BEA18215ECC00400140956 /* WG2Tests.m */; };
+		69BEA19615ECC0BE00140956 /* AppStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BEA19215ECC0BE00140956 /* AppStateManager.m */; };
+		69BEA19715ECC0BE00140956 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BEA19515ECC0BE00140956 /* Login.m */; };
+		69BEA19B15ECC0C500140956 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BEA19A15ECC0C500140956 /* AppState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +40,27 @@
 		69BEA15715ECC00300140956 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		69BEA15915ECC00300140956 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		69BEA15B15ECC00300140956 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		69BEA15F15ECC00300140956 /* WG2-Info.plist */ = {isa = PBXFileReference; path = "WG2-Info.plist"; sourceTree = "<group>"; };
+		69BEA15F15ECC00300140956 /* WG2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WG2-Info.plist"; sourceTree = "<group>"; };
 		69BEA16115ECC00300140956 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		69BEA16315ECC00300140956 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		69BEA16515ECC00300140956 /* WG2-Prefix.pch */ = {isa = PBXFileReference; path = "WG2-Prefix.pch"; sourceTree = "<group>"; };
-		69BEA16615ECC00300140956 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		69BEA16515ECC00300140956 /* WG2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WG2-Prefix.pch"; sourceTree = "<group>"; };
+		69BEA16615ECC00300140956 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69BEA16715ECC00300140956 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		69BEA16915ECC00300140956 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		69BEA16915ECC00300140956 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		69BEA16A15ECC00300140956 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		69BEA16D15ECC00300140956 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		69BEA17415ECC00300140956 /* WG2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WG2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BEA17515ECC00300140956 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		69BEA17D15ECC00300140956 /* WG2Tests-Info.plist */ = {isa = PBXFileReference; path = "WG2Tests-Info.plist"; sourceTree = "<group>"; };
+		69BEA17D15ECC00300140956 /* WG2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WG2Tests-Info.plist"; sourceTree = "<group>"; };
 		69BEA17F15ECC00300140956 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		69BEA18115ECC00300140956 /* WG2Tests.h */ = {isa = PBXFileReference; path = WG2Tests.h; sourceTree = "<group>"; };
+		69BEA18115ECC00300140956 /* WG2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WG2Tests.h; sourceTree = "<group>"; };
 		69BEA18215ECC00400140956 /* WG2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WG2Tests.m; sourceTree = "<group>"; };
+		69BEA19115ECC0BE00140956 /* AppStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStateManager.h; sourceTree = "<group>"; };
+		69BEA19215ECC0BE00140956 /* AppStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStateManager.m; sourceTree = "<group>"; };
+		69BEA19415ECC0BE00140956 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		69BEA19515ECC0BE00140956 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		69BEA19915ECC0C500140956 /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
+		69BEA19A15ECC0C500140956 /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +122,10 @@
 			children = (
 				69BEA16615ECC00300140956 /* AppDelegate.h */,
 				69BEA16715ECC00300140956 /* AppDelegate.m */,
+				69BEA19015ECC0BE00140956 /* Framework */,
 				69BEA16915ECC00300140956 /* ViewController.h */,
 				69BEA16A15ECC00300140956 /* ViewController.m */,
+				69BEA19815ECC0C500140956 /* BaseClass */,
 				69BEA16C15ECC00300140956 /* ViewController.xib */,
 				69BEA15E15ECC00300140956 /* Supporting Files */,
 			);
@@ -149,6 +160,34 @@
 				69BEA17E15ECC00300140956 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69BEA19015ECC0BE00140956 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				69BEA19115ECC0BE00140956 /* AppStateManager.h */,
+				69BEA19215ECC0BE00140956 /* AppStateManager.m */,
+				69BEA19315ECC0BE00140956 /* State */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		69BEA19315ECC0BE00140956 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				69BEA19415ECC0BE00140956 /* Login.h */,
+				69BEA19515ECC0BE00140956 /* Login.m */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		69BEA19815ECC0C500140956 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				69BEA19915ECC0C500140956 /* AppState.h */,
+				69BEA19A15ECC0C500140956 /* AppState.m */,
+			);
+			path = BaseClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +300,9 @@
 				69BEA16415ECC00300140956 /* main.m in Sources */,
 				69BEA16815ECC00300140956 /* AppDelegate.m in Sources */,
 				69BEA16B15ECC00300140956 /* ViewController.m in Sources */,
+				69BEA19615ECC0BE00140956 /* AppStateManager.m in Sources */,
+				69BEA19715ECC0BE00140956 /* Login.m in Sources */,
+				69BEA19B15ECC0C500140956 /* AppState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
