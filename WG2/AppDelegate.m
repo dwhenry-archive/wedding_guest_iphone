@@ -15,6 +15,7 @@
 @synthesize authToken = _authToken;
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize host = _host;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -22,6 +23,7 @@
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    self.host = @"http://localhost:3000";
     
     [NSTimer scheduledTimerWithTimeInterval:0.33 
                                      target:self 

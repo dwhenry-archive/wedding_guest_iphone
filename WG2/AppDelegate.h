@@ -13,9 +13,11 @@
 //@interface AppDelegate : UIResponder <UIApplicationDelegate>
 @interface AppDelegate : AppStateManager <UIApplicationDelegate> {
     NSString* authToken;
+    NSString* host;
 }
 
 @property  NSString *authToken;
+@property  NSString *host;
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) ViewController *viewController;
 

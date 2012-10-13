@@ -60,8 +60,7 @@ UILabel *label;
 }
 -(void)login
 {
-    NSString *host = @"http://localhost:3000";
-    NSString *urlString=[NSString stringWithFormat:@"%@/users/sign_in.json", host];
+    NSString *urlString=[NSString stringWithFormat:@"%@/users/sign_in.json", m_pManager.host];
     NSURL *url = [NSURL URLWithString:urlString];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setPostValue:loginField.text forKey:@"user[login]"];

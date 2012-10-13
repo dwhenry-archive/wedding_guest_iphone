@@ -7,6 +7,7 @@
 //
 
 #import "WeddingList.h"
+#import "ASIHTTPRequest.h"
 bool rendered;
 
 @implementation WeddingList
@@ -43,5 +44,24 @@ bool rendered;
 //    
 //    [self addButton: @"Submit" calling:@selector(login)];
 }
-
+-(NSArray*)weddings
+{
+    NSString *host = @"http://localhost:3000";
+    NSString *urlString=[NSString stringWithFormat:@"%@/weddings.json", host];
+    NSURL *url = [NSURL URLWithString:urlString];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    
+    NSArray *aa;
+    [request startSynchronous];
+    if ([request responseStatusCode] == 200) {
+        aa = [NSArray init];
+        return aa;
+    } else {
+        NSLog(@"pooo");
+        return aa;
+//        [self setMessage: @"Invalid username/password"];
+        // put up some sort fo failure message..
+    }
+    
+}
 @end
