@@ -35,13 +35,18 @@
 }
 -(void) gameLoop
 {
-    [((AppState*)self.viewController.view) Update];
-    [((AppState*)self.viewController.view) Render];
+    [self Render];
 
     [NSTimer scheduledTimerWithTimeInterval:0.33 
                                      target:self 
                                    selector:@selector(gameLoop) 
                                    userInfo:nil repeats:NO];
+}
+-(void) Render
+{
+    [((AppState*)self.viewController.view) Update];
+    [((AppState*)self.viewController.view) Render];
+
 }
 -(void) doStateChange:(id)state
 {
@@ -54,7 +59,6 @@
                                 andManager: self];
     [self.window addSubview:self.viewController.view];
     [self.window makeKeyAndVisible];
-    
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

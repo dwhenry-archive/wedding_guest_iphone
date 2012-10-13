@@ -7,7 +7,7 @@
 //
 
 #import "AppState.h"
-
+#import "UIViewWithBorder.h"
 
 @implementation AppState
 UITextField *lastInputElement;
@@ -124,6 +124,28 @@ UITextField *lastInputElement;
         [theTextField resignFirstResponder];
     }
     return NO; 
+}
+-(void)addButton:(NSString*)buttonName calling:(SEL)methodName
+{
+    UIViewWithBorder *button = [[UIViewWithBorder alloc]
+                                initWithFrame:CGRectMake(60, top + 10, IPHONE_WIDTH - 120, 40)
+                                andText:buttonName];
+    
+    [button addTouchUpEvent:self action:methodName];
+    
+    [self addSubview:button];
+    top = top + 50;
+}
+-(void)addClickableRow:(NSString*)text calling:(SEL)methodName
+{
+    UIViewWithBorder *button = [[UIViewWithBorder alloc]
+                                initWithFrame:CGRectMake(60, top + 10, IPHONE_WIDTH - 120, 40)
+                                andText:text];
+    
+    [button addTouchUpEvent:self action:methodName];
+    
+    [self addSubview:button];
+    top = top + 50;
 }
 
 @end

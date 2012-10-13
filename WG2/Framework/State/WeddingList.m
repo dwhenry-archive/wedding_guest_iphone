@@ -7,7 +7,10 @@
 //
 
 #import "WeddingList.h"
+#import "Login.h"
 #import "ASIHTTPRequest.h"
+#import "JSONKit.h"
+#import "ViewController.h"
 bool rendered;
 
 @implementation WeddingList
@@ -17,7 +20,7 @@ bool rendered;
     self = [super initWithFrame:frame andManager:pManager];
     if (self) {
         // Initialization code
-        NSLog(@"TODO: add remember user functionality");
+        NSLog(@"On wedding screen");
     }
     rendered = false;
     return self;
@@ -32,6 +35,15 @@ bool rendered;
     [self addHeader: @"Wedding Guests"];
     [self addHeader: @"Weddings" withSize: 2];
     
+    id weddings = [self weddings];
+    
+    NSEnumerator *arrenum = [weddings objectEnumerator];
+    id wedding;
+    while ( wedding = [arrenum nextObject] ) {
+        [self addWeddingDetails: wedding];
+    }
+
+//    NSLog(weddings);
 //    loginField = [self addField: @"Login"];
 //    loginField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 //    loginField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -44,24 +56,33 @@ bool rendered;
 //    
 //    [self addButton: @"Submit" calling:@selector(login)];
 }
--(NSArray*)weddings
+-(id)weddings
 {
-    NSString *host = @"http://localhost:3000";
-    NSString *urlString=[NSString stringWithFormat:@"%@/weddings.json", host];
+    NSString *urlString=[NSString stringWithFormat:@"%@/weddings.json?auth_token=%@", m_pManager.host, m_pManager.authToken];
     NSURL *url = [NSURL URLWithString:urlString];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     
-    NSArray *aa;
+    NSArray *weddings;
     [request startSynchronous];
     if ([request responseStatusCode] == 200) {
-        aa = [NSArray init];
-        return aa;
+        weddings = [[request responseString] objectFromJSONString];
+        return weddings;
     } else {
-        NSLog(@"pooo");
-        return aa;
-//        [self setMessage: @"Invalid username/password"];
-        // put up some sort fo failure message..
+        [m_pManager doStateChange:[Login class]];
+        
+        
+        ViewController* viewControler = m_pManager.viewController;
+        id loginView = viewControler.view;
+        [loginView setMessage: @"Connection failure\nUnable to retrieve Wedding List" ];
+        return weddings;
     }
     
+}
+-(void)addWeddingDetails:(NSDictionary*)wedding
+{
+    NSString* text = [wedding objectForKey:@"wedding"];
+    NSString* weddingUrl = [wedding objectForKey:@"url"];
+    
+    [self addClickableRow:text calling:@selector(viewWedding)];
 }
 @end

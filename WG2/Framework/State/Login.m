@@ -17,13 +17,15 @@ UITextField* loginField;
 UITextField* passwordField; 
 bool rendered;
 UILabel *label;
+
 - (id)initWithFrame:(CGRect)frame andManager:(AppStateManager *)pManager
 {
     self = [super initWithFrame:frame andManager:pManager];
     if (self) {
         // Initialization code
-        NSLog(@"TODO: add remember user functionality");
+        NSLog(@"On Login Screen");
     }
+    rendered = false;
     return self;
 }
 -(void) Render 
@@ -47,17 +49,6 @@ UILabel *label;
     
     [self addButton: @"Submit" calling:@selector(login)];
 }
--(void)addButton:(NSString*)buttonName calling:(SEL)methodName
-{
-    UIViewWithBorder *button = [[UIViewWithBorder alloc] 
-                                initWithFrame:CGRectMake(60, top + 10, IPHONE_WIDTH - 120, 40)
-                                andText:buttonName];
-
-    [button addTouchUpEvent:self action:methodName];
-
-    [self addSubview:button];
-    top = top + 50;
-}
 -(void)login
 {
     NSString *urlString=[NSString stringWithFormat:@"%@/users/sign_in.json", m_pManager.host];
@@ -76,10 +67,11 @@ UILabel *label;
         // put up some sort fo failure message..
     }
 }
--(void)setMessage:(NSString*)message
+-(void)setMessageValue:(NSString*)message
 {
-    if (label == NULL) { 
+    if (label == NULL) {
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, top, IPHONE_WIDTH, 35)];
+        label.numberOfLines = 0;
         label.font = [UIFont fontWithName:@"Helvetica-Bold" size:14]; //[UIFont systemFontOfSize: 30];
         label.textAlignment = UITextAlignmentCenter;
         label.backgroundColor = [UIColor clearColor];
@@ -89,5 +81,24 @@ UILabel *label;
         
     top = top + 65;
    
+}
+-(void)setMessageTimer:(NSTimer*)timer
+{
+    NSString* message;
+    message = (NSString*)[timer userInfo];
+    [self setMessage:message];
+}
+-(void)setMessage:(NSString*)message
+{
+    if (!rendered) {
+        [NSTimer scheduledTimerWithTimeInterval:0.33
+                                         target:self
+                                       selector:@selector(setMessageTimer:)
+                                       userInfo:message repeats:NO];
+        return;
+    } else {
+        [self setMessageValue: message];
+    }
+    
 }
 @end

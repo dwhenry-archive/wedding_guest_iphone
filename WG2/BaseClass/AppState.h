@@ -21,4 +21,6 @@
 -(void) addHeader: (NSString*)header;
 -(void) addHeader: (NSString*)header withSize:(NSInteger)size;
 -(void) addFieldToCallChain:(UITextField*)passwordField;
+-(void)addButton:(NSString*)buttonName calling:(SEL)methodName;
+-(void)addClickableRow:(NSString*)text calling:(SEL)methodName;
 @end

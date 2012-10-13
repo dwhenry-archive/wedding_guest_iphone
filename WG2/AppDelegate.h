@@ -14,6 +14,7 @@
 @interface AppDelegate : AppStateManager <UIApplicationDelegate> {
     NSString* authToken;
     NSString* host;
+    ViewController *viewController;
 }
 
 @property  NSString *authToken;

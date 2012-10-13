@@ -9,5 +9,6 @@
 #import "AppState.h"
 
 @interface Login : AppState
-
+-(void)setMessage:(NSString*)message;
+-(void)setMessageTimer:(NSTimer*)timer;
 @end
