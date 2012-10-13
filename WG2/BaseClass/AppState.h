@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppStateManager.h"
+#import "AppDelegate.h"
 @interface AppState : UIView {
-    AppStateManager* m_pManager;
+    AppDelegate* m_pManager;
     int top;
 }
 
@@ -19,5 +19,6 @@
 -(void) setBackground;
 -(UITextField*)addField:(NSString*)fieldName;
 -(void) addHeader: (NSString*)header;
+-(void) addHeader: (NSString*)header withSize:(NSInteger)size;
 -(void) addFieldToCallChain:(UITextField*)passwordField;
 @end

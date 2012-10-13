@@ -21,7 +21,7 @@ UITextField *lastInputElement;
     return self;
 }
 
--(id) initWithFrame:(CGRect)frame andManager:(AppStateManager*)pManager
+-(id) initWithFrame:(CGRect)frame andManager:(AppDelegate*)pManager
 {
     if (self = [super initWithFrame:frame]) {
         m_pManager = pManager;
@@ -54,18 +54,35 @@ UITextField *lastInputElement;
 }
 -(void) addHeader:(NSString*)header
 {
+    [self addHeader:header withSize:1];
+}
+-(NSInteger) fontSize: (NSInteger)size
+{
+    return (7 - size) * 5;
+}
+-(NSInteger) topOffset: (NSInteger)size
+{
+    if (size == 1)
+        return 65;
+    else 
+        return [self fontSize:size] + 15;
+}
+-(void) addHeader: (NSString*)header withSize:(NSInteger)size
+{
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, top, IPHONE_WIDTH, 35)];
-    headerLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:30]; //[UIFont systemFontOfSize: 30];
+    headerLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:[self fontSize:size]]; //[UIFont systemFontOfSize: 30];
     headerLabel.text = header;
     headerLabel.textAlignment = UITextAlignmentCenter;
     headerLabel.backgroundColor = [UIColor clearColor];
     [self addSubview:headerLabel];
-
-    UILabel *borderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, top + 49, IPHONE_WIDTH-20, 2)];
-    borderLabel.backgroundColor = [UIColor blackColor];
-    [self addSubview:borderLabel];
     
-    top = top + 65;
+    if (size == 1) {
+        UILabel *borderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, top + 49, IPHONE_WIDTH-20, 2)];
+        borderLabel.backgroundColor = [UIColor blackColor];
+        [self addSubview:borderLabel];
+    }
+        
+    top = top + [self topOffset:size];    
 }
 -(UITextField*)addField:(NSString*)fieldName
 {

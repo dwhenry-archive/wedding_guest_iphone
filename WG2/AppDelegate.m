@@ -12,6 +12,7 @@
 #import "Login.h"
 @implementation AppDelegate
 
+@synthesize authToken = _authToken;
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 

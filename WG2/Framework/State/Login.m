@@ -7,12 +7,16 @@
 //
 
 #import "Login.h"
+#import "WeddingList.h"
 #import "UIViewWithBorder.h"
+//#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
 
 @implementation Login
 UITextField* loginField;
 UITextField* passwordField; 
 bool rendered;
+UILabel *label;
 - (id)initWithFrame:(CGRect)frame andManager:(AppStateManager *)pManager
 {
     self = [super initWithFrame:frame andManager:pManager];
@@ -54,48 +58,37 @@ bool rendered;
     [self addSubview:button];
     top = top + 50;
 }
-//-(void)autologin
-//{
-////    [UIDevice currentDevice].uniqueIdentifier;
-//    NSString *url = [NSString stringWithFormat:@"http://localhost:3000/know_user?uuid=%@",[UIDevice currentDevice].uniqueIdentifier];
-//    [self postJsonToUrl:url];
-//}
 -(void)login
 {
-    const char *bytes = [[NSString stringWithFormat:@"user_login=%@&user_password=%@", loginField.text, passwordField.text] UTF8String];
-
     NSString *host = @"http://localhost:3000";
     NSString *urlString=[NSString stringWithFormat:@"%@/users/sign_in.json", host];
     NSURL *url = [NSURL URLWithString:urlString];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:loginField.text forKey:@"user[login]"];
+    [request setPostValue:passwordField.text forKey:@"user[password]"];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[NSData dataWithBytes:bytes length:strlen(bytes)]];
-    
-    NSURLResponse *response;
-    NSError *err;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    NSLog(@"responseData: %@", responseData);
-    NSLog(@"Error: %@", err);
-}
--(void)postJsonToUrl:(NSString*)url 
-{
-//    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/weddings.json"];
-    
-    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    
-    id result;
-    if(jsonData != nil)
-    {
-        NSError *error = nil;
-        result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-        if (error == nil) {
-            NSLog(@"%@", result);
-//            return result;
-        } else {
-            NSLog(@"%@", error);
-        }
+    [request startSynchronous];
+    if ([request responseStatusCode] == 200) {
+        NSString *authToken = [request responseString];
+        m_pManager.authToken = authToken;
+        [m_pManager doStateChange:[WeddingList class]];
+    } else {
+        [self setMessage: @"Invalid username/password"];
+        // put up some sort fo failure message..
     }
+}
+-(void)setMessage:(NSString*)message
+{
+    if (label == NULL) { 
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, top, IPHONE_WIDTH, 35)];
+        label.font = [UIFont fontWithName:@"Helvetica-Bold" size:14]; //[UIFont systemFontOfSize: 30];
+        label.textAlignment = UITextAlignmentCenter;
+        label.backgroundColor = [UIColor clearColor];
+    }
+    label.text = message;
+    [self addSubview:label];
+        
+    top = top + 65;
+   
 }
 @end

@@ -13,5 +13,6 @@
 #import "UITextFieldExtended.h"
 
 @interface AppStateManager : NSObject
+
 -(void) doStateChange: (Class) state;
 @end

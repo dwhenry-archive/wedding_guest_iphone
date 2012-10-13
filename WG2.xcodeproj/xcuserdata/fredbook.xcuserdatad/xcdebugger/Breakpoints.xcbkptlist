@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WG2/Framework/State/Login.m"
-         timestampString = "367858766.007389"
+         timestampString = "370905956.649548"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
          landmarkName = "-Render"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,7 +60,20 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WG2/Framework/State/Login.m"
-         timestampString = "367862322.715025"
+         timestampString = "370905956.649548"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
+         landmarkName = "-setMessage:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WG2/Framework/State/Login.m"
+         timestampString = "370907080.846408"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "73"
@@ -73,12 +86,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WG2/Framework/State/Login.m"
-         timestampString = "368396738.481759"
+         timestampString = "370906226.151513"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
-         landmarkName = "-postJsonToUrl:"
+         startingLineNumber = "74"
+         endingLineNumber = "74"
+         landmarkName = "-login"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WG2/Framework/State/WeddingList.m"
+         timestampString = "370907305.872719"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "-Render"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
