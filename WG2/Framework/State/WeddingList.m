@@ -31,6 +31,7 @@ bool rendered;
         return;
     
     rendered = true;
+    top = 40;
     [self setBackground];
     [self addHeader: @"Wedding Guests"];
     [self addHeader: @"Weddings" withSize: 2];
@@ -42,19 +43,11 @@ bool rendered;
     while ( wedding = [arrenum nextObject] ) {
         [self addWeddingDetails: wedding];
     }
-
-//    NSLog(weddings);
-//    loginField = [self addField: @"Login"];
-//    loginField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-//    loginField.autocorrectionType = UITextAutocorrectionTypeNo;
-//    loginField.keyboardType = UIKeyboardTypeEmailAddress;
-//    
-//    passwordField = [self addField: @"Password"];
-//    passwordField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-//    passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
-//    passwordField.secureTextEntry = YES;
-//    
-//    [self addButton: @"Submit" calling:@selector(login)];
+    [self addButton: @"Refresh" calling:@selector(refresh)];
+}
+-(void)refresh
+{
+    [m_pManager doStateChange:[WeddingList class]];
 }
 -(id)weddings
 {
@@ -81,8 +74,10 @@ bool rendered;
 -(void)addWeddingDetails:(NSDictionary*)wedding
 {
     NSString* text = [wedding objectForKey:@"wedding"];
-    NSString* weddingUrl = [wedding objectForKey:@"url"];
+    NSString* weddingUrl = [wedding objectForKey:@"image_path"];
     
-    [self addClickableRow:text calling:@selector(viewWedding)];
+    NSString *urlString=[NSString stringWithFormat:@"%@/%@", m_pManager.host, weddingUrl];
+
+    [self addClickableRow:text imageUrl:urlString calling:@selector(viewWedding)];
 }
 @end

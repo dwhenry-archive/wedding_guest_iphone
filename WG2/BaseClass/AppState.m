@@ -8,6 +8,7 @@
 
 #import "AppState.h"
 #import "UIViewWithBorder.h"
+#import "UIRowWithImage.h"
 
 @implementation AppState
 UITextField *lastInputElement;
@@ -50,7 +51,30 @@ UITextField *lastInputElement;
     CGContextFillRect(g, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));    
     
     CGContextSetFillColorWithColor(g, [UIColor blackColor].CGColor);
+
+    CGSize size = self.frame.size;
     
+    UIImage * image = [[self resize:[UIImage imageNamed:@"floral_bg.jpg"] scalefactor:0.4] resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile];
+    // 119, 710
+    
+    UIImageView *container = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+
+    container.alpha = 0.2;
+    container.contentMode = UIImageResizingModeTile;
+    container.image = image;
+    
+    [self addSubview:container];
+}
+- (UIImage *)resize:(UIImage *)image scalefactor:(float)scale
+{
+    CGSize size = image.size;
+    CGSize newSize = CGRectMake(0, 0, size.width * scale, size.height * scale).size;
+    
+    UIGraphicsBeginImageContext(newSize);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 -(void) addHeader:(NSString*)header
 {
@@ -136,16 +160,17 @@ UITextField *lastInputElement;
     [self addSubview:button];
     top = top + 50;
 }
--(void)addClickableRow:(NSString*)text calling:(SEL)methodName
+-(void)addClickableRow:(NSString*)text imageUrl:(NSString*)weddingUrl calling:(SEL)methodName
 {
-    UIViewWithBorder *button = [[UIViewWithBorder alloc]
-                                initWithFrame:CGRectMake(60, top + 10, IPHONE_WIDTH - 120, 40)
-                                andText:text];
+    UIRowWithImage *row = [[UIRowWithImage alloc]
+                                initWithFrame:CGRectMake(20, top, IPHONE_WIDTH - 40, 40)
+                                andText:text
+                                andImageUrl:weddingUrl];
     
-    [button addTouchUpEvent:self action:methodName];
+    [row addTouchUpEvent:self action:methodName];
     
-    [self addSubview:button];
-    top = top + 50;
+    [self addSubview:row];
+    top = top + 39;
 }
 
 @end

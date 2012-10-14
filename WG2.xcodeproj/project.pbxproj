@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6954592415F6B801003A607C /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6954592315F6B801003A607C /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
+		16F7B3981629F341005C5BC2 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B3971629F341005C5BC2 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		16F7B39D162A0E32005C5BC2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B39C162A0E32005C5BC2 /* JSONKit.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
+		16F7B3A0162B1648005C5BC2 /* UIRowWithImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B39F162B1648005C5BC2 /* UIRowWithImage.m */; };
+		16F7B3A2162B5879005C5BC2 /* floral_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16F7B3A1162B5879005C5BC2 /* floral_bg.jpg */; };
 		69BEA15815ECC00300140956 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BEA15715ECC00300140956 /* UIKit.framework */; };
 		69BEA15A15ECC00300140956 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BEA15915ECC00300140956 /* Foundation.framework */; };
 		69BEA15C15ECC00300140956 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BEA15B15ECC00300140956 /* CoreGraphics.framework */; };
@@ -50,8 +53,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6954592215F6B801003A607C /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = "../../../asi-http-request/Classes/ASIFormDataRequest.h"; sourceTree = "<group>"; };
-		6954592315F6B801003A607C /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = "../../../asi-http-request/Classes/ASIFormDataRequest.m"; sourceTree = "<group>"; };
+		16F7B3961629F341005C5BC2 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		16F7B3971629F341005C5BC2 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		16F7B39A1629F36A005C5BC2 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		16F7B39B162A0E32005C5BC2 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = JSONKit/JSONKit.h; sourceTree = "<group>"; };
+		16F7B39C162A0E32005C5BC2 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = JSONKit/JSONKit.m; sourceTree = "<group>"; };
+		16F7B39E162B1648005C5BC2 /* UIRowWithImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRowWithImage.h; sourceTree = "<group>"; };
+		16F7B39F162B1648005C5BC2 /* UIRowWithImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRowWithImage.m; sourceTree = "<group>"; };
+		16F7B3A1162B5879005C5BC2 /* floral_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floral_bg.jpg; sourceTree = "<group>"; };
 		69BEA15315ECC00300140956 /* WG2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WG2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BEA15715ECC00300140956 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		69BEA15915ECC00300140956 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,7 +108,6 @@
 		69CCD79E15F557C1003B43EC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		69CCD7A015F557CC003B43EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		69CCD7A215F557D7003B43EC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		69CCD7A415F55BC6003B43EC /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = "../../../asi-http-request/Classes/ASIProgressDelegate.h"; sourceTree = "<group>"; };
 		69CCD7A515F55D52003B43EC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		69CCD7A715F55DB9003B43EC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		69FBA71E161B8B7000AEEBAB /* WeddingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeddingList.h; sourceTree = "<group>"; };
@@ -189,6 +197,7 @@
 		69BEA15E15ECC00300140956 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16F7B3A1162B5879005C5BC2 /* floral_bg.jpg */,
 				69BEA15F15ECC00300140956 /* WG2-Info.plist */,
 				69BEA16015ECC00300140956 /* InfoPlist.strings */,
 				69BEA16315ECC00300140956 /* main.m */,
@@ -253,6 +262,8 @@
 				69BEA1A315ED021700140956 /* UIViewWithBorder.m */,
 				69BEA1A515ED113700140956 /* UITextFieldExtended.h */,
 				69BEA1A615ED113700140956 /* UITextFieldExtended.m */,
+				16F7B39E162B1648005C5BC2 /* UIRowWithImage.h */,
+				16F7B39F162B1648005C5BC2 /* UIRowWithImage.m */,
 			);
 			path = view_helpers;
 			sourceTree = "<group>";
@@ -260,9 +271,11 @@
 		69CCD78715F54CF6003B43EC /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				6954592215F6B801003A607C /* ASIFormDataRequest.h */,
-				6954592315F6B801003A607C /* ASIFormDataRequest.m */,
-				69CCD7A415F55BC6003B43EC /* ASIProgressDelegate.h */,
+				16F7B39B162A0E32005C5BC2 /* JSONKit.h */,
+				16F7B39C162A0E32005C5BC2 /* JSONKit.m */,
+				16F7B39A1629F36A005C5BC2 /* ASIProgressDelegate.h */,
+				16F7B3961629F341005C5BC2 /* ASIFormDataRequest.h */,
+				16F7B3971629F341005C5BC2 /* ASIFormDataRequest.m */,
 				69CCD79B15F55790003B43EC /* Reachability.h */,
 				69CCD79C15F55790003B43EC /* Reachability.m */,
 				69CCD79A15F55748003B43EC /* ASIHTTPRequestConfig.h */,
@@ -355,6 +368,7 @@
 			files = (
 				69BEA16215ECC00300140956 /* InfoPlist.strings in Resources */,
 				69BEA16E15ECC00300140956 /* ViewController.xib in Resources */,
+				16F7B3A2162B5879005C5BC2 /* floral_bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,8 +417,10 @@
 				69CCD79315F55694003B43EC /* ASIDataDecompressor.m in Sources */,
 				69CCD79615F556BB003B43EC /* ASIAuthenticationDialog.m in Sources */,
 				69CCD79D15F55790003B43EC /* Reachability.m in Sources */,
-				6954592415F6B801003A607C /* ASIFormDataRequest.m in Sources */,
 				69FBA720161B8B7000AEEBAB /* WeddingList.m in Sources */,
+				16F7B3981629F341005C5BC2 /* ASIFormDataRequest.m in Sources */,
+				16F7B39D162A0E32005C5BC2 /* JSONKit.m in Sources */,
+				16F7B3A0162B1648005C5BC2 /* UIRowWithImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +522,7 @@
 				GCC_PREFIX_HEADER = "WG2/WG2-Prefix.pch";
 				INFOPLIST_FILE = "WG2/WG2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -517,6 +534,7 @@
 				GCC_PREFIX_HEADER = "WG2/WG2-Prefix.pch";
 				INFOPLIST_FILE = "WG2/WG2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

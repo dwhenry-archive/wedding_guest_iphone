@@ -19,7 +19,6 @@
         self.backgroundColor = [UIColor blackColor];
         
         self.layer.cornerRadius = 8;
-        //    view.clipsToBounds = YES;
         self.layer.masksToBounds = YES;
 
         self.view = [self subview:frame.size];
@@ -45,13 +44,11 @@
 }
 -(UIView*)subview:(CGSize)size
 {
-    CGRect viewRect = CGRectMake(2, 2, size.width - 4, size.height - 4);
+    CGRect viewRect = CGRectMake(1, 1, size.width - 2, size.height - 2);
     UIView *subView = [[UIView alloc] initWithFrame:viewRect];
 
     subView.backgroundColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0];
 
-//    subView.backgroundColor = [UIColor grayColor];
-    
     subView.layer.cornerRadius = 6;
     subView.layer.masksToBounds = YES;
     return subView;
