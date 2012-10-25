@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1610A650163952B70063CCF1 /* UIActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610A64F163952B70063CCF1 /* UIActionButton.m */; };
+		1610A654163997270063CCF1 /* Gifts.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610A653163997270063CCF1 /* Gifts.m */; };
+		1610A6571639A5A90063CCF1 /* NewGift.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610A6561639A5A90063CCF1 /* NewGift.m */; };
 		16F7B3981629F341005C5BC2 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B3971629F341005C5BC2 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		16F7B39D162A0E32005C5BC2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B39C162A0E32005C5BC2 /* JSONKit.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
 		16F7B3A0162B1648005C5BC2 /* UIRowWithImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B39F162B1648005C5BC2 /* UIRowWithImage.m */; };
 		16F7B3A2162B5879005C5BC2 /* floral_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16F7B3A1162B5879005C5BC2 /* floral_bg.jpg */; };
+		16F7B3A5162B6DB1005C5BC2 /* Wedding.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B3A4162B6DB1005C5BC2 /* Wedding.m */; };
+		16F7B3A8162B7213005C5BC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16F7B3A6162B7202005C5BC2 /* Default-568h@2x.png */; };
 		69BEA15815ECC00300140956 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BEA15715ECC00300140956 /* UIKit.framework */; };
 		69BEA15A15ECC00300140956 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BEA15915ECC00300140956 /* Foundation.framework */; };
 		69BEA15C15ECC00300140956 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BEA15B15ECC00300140956 /* CoreGraphics.framework */; };
@@ -53,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1610A64E163952B70063CCF1 /* UIActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActionButton.h; sourceTree = "<group>"; };
+		1610A64F163952B70063CCF1 /* UIActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActionButton.m; sourceTree = "<group>"; };
+		1610A652163997270063CCF1 /* Gifts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gifts.h; sourceTree = "<group>"; };
+		1610A653163997270063CCF1 /* Gifts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gifts.m; sourceTree = "<group>"; };
+		1610A6551639A5A80063CCF1 /* NewGift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGift.h; sourceTree = "<group>"; };
+		1610A6561639A5A90063CCF1 /* NewGift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGift.m; sourceTree = "<group>"; };
 		16F7B3961629F341005C5BC2 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
 		16F7B3971629F341005C5BC2 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
 		16F7B39A1629F36A005C5BC2 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +72,9 @@
 		16F7B39E162B1648005C5BC2 /* UIRowWithImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRowWithImage.h; sourceTree = "<group>"; };
 		16F7B39F162B1648005C5BC2 /* UIRowWithImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRowWithImage.m; sourceTree = "<group>"; };
 		16F7B3A1162B5879005C5BC2 /* floral_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floral_bg.jpg; sourceTree = "<group>"; };
+		16F7B3A3162B6DB1005C5BC2 /* Wedding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wedding.h; sourceTree = "<group>"; };
+		16F7B3A4162B6DB1005C5BC2 /* Wedding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wedding.m; sourceTree = "<group>"; };
+		16F7B3A6162B7202005C5BC2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		69BEA15315ECC00300140956 /* WG2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WG2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BEA15715ECC00300140956 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		69BEA15915ECC00300140956 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,6 +159,7 @@
 		69BEA14815ECC00300140956 = {
 			isa = PBXGroup;
 			children = (
+				16F7B3A6162B7202005C5BC2 /* Default-568h@2x.png */,
 				69CCD7A715F55DB9003B43EC /* libz.dylib */,
 				69CCD7A515F55D52003B43EC /* MessageUI.framework */,
 				69CCD7A215F557D7003B43EC /* MobileCoreServices.framework */,
@@ -242,6 +257,12 @@
 				69BEA19515ECC0BE00140956 /* Login.m */,
 				69FBA71E161B8B7000AEEBAB /* WeddingList.h */,
 				69FBA71F161B8B7000AEEBAB /* WeddingList.m */,
+				16F7B3A3162B6DB1005C5BC2 /* Wedding.h */,
+				16F7B3A4162B6DB1005C5BC2 /* Wedding.m */,
+				1610A652163997270063CCF1 /* Gifts.h */,
+				1610A653163997270063CCF1 /* Gifts.m */,
+				1610A6551639A5A80063CCF1 /* NewGift.h */,
+				1610A6561639A5A90063CCF1 /* NewGift.m */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -264,6 +285,8 @@
 				69BEA1A615ED113700140956 /* UITextFieldExtended.m */,
 				16F7B39E162B1648005C5BC2 /* UIRowWithImage.h */,
 				16F7B39F162B1648005C5BC2 /* UIRowWithImage.m */,
+				1610A64E163952B70063CCF1 /* UIActionButton.h */,
+				1610A64F163952B70063CCF1 /* UIActionButton.m */,
 			);
 			path = view_helpers;
 			sourceTree = "<group>";
@@ -369,6 +392,7 @@
 				69BEA16215ECC00300140956 /* InfoPlist.strings in Resources */,
 				69BEA16E15ECC00300140956 /* ViewController.xib in Resources */,
 				16F7B3A2162B5879005C5BC2 /* floral_bg.jpg in Resources */,
+				16F7B3A8162B7213005C5BC2 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +445,10 @@
 				16F7B3981629F341005C5BC2 /* ASIFormDataRequest.m in Sources */,
 				16F7B39D162A0E32005C5BC2 /* JSONKit.m in Sources */,
 				16F7B3A0162B1648005C5BC2 /* UIRowWithImage.m in Sources */,
+				16F7B3A5162B6DB1005C5BC2 /* Wedding.m in Sources */,
+				1610A650163952B70063CCF1 /* UIActionButton.m in Sources */,
+				1610A654163997270063CCF1 /* Gifts.m in Sources */,
+				1610A6571639A5A90063CCF1 /* NewGift.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

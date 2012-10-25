@@ -11,6 +11,8 @@
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 #import "ViewController.h"
+#import "UIRowWithImage.h"
+#import "Wedding.h"
 bool rendered;
 
 @implementation WeddingList
@@ -20,7 +22,7 @@ bool rendered;
     self = [super initWithFrame:frame andManager:pManager];
     if (self) {
         // Initialization code
-        NSLog(@"On wedding screen");
+        NSLog(@"On weddings screen");
     }
     rendered = false;
     return self;
@@ -74,10 +76,19 @@ bool rendered;
 -(void)addWeddingDetails:(NSDictionary*)wedding
 {
     NSString* text = [wedding objectForKey:@"wedding"];
-    NSString* weddingUrl = [wedding objectForKey:@"image_path"];
+    NSString* imageUrl = [wedding objectForKey:@"image_path"];
+    NSString* weddingUrl = [wedding objectForKey:@"url"];
     
-    NSString *urlString=[NSString stringWithFormat:@"%@/%@", m_pManager.host, weddingUrl];
+    NSString *imageURL = [NSString stringWithFormat:@"%@/%@", m_pManager.host, imageUrl];
 
-    [self addClickableRow:text imageUrl:urlString calling:@selector(viewWedding)];
+    [self addClickableRow:text imageUrl:imageURL weddingUrl:weddingUrl calling:@selector(viewWedding:)];
+}
+-(void)viewWedding:(id)sender
+{
+    UIButton* button = (UIButton*)sender;
+    UIRowWithImage* row = (UIRowWithImage*)button.superview;
+    [m_pManager doStateChange:[Wedding class]];
+    Wedding* wedding = (Wedding*)[m_pManager viewController].view;
+    [wedding setWeddingUrl: row.weddingUrl];
 }
 @end

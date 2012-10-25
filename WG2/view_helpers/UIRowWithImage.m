@@ -12,6 +12,7 @@
 @implementation UIRowWithImage
 @synthesize view;
 @synthesize button;
+@synthesize weddingUrl = _weddingUrl;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -29,10 +30,11 @@
     }
     return self;
 }
-- (id)initWithFrame:(CGRect)frame andText:(NSString*)labelText andImageUrl:(NSString *)imageUrl
+- (id)initWithFrame:(CGRect)frame andText:(NSString*)labelText andImageUrl:(NSString *)imageUrl andWeddingUrl:(NSString*)weddingUrl
 {
     self = [self initWithFrame:frame];
     if (self) {
+        self.weddingUrl = weddingUrl;
         [self.view addSubview:[self createImage:imageUrl]];
         [self.view addSubview:[self createLabel:labelText]];
     }

@@ -16,7 +16,7 @@
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 @synthesize host = _host;
-
+NSMutableArray *views;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -24,6 +24,7 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     self.host = @"http://localhost:3000";
+    views = [NSMutableArray arrayWithCapacity:6];
     
     [NSTimer scheduledTimerWithTimeInterval:0.33 
                                      target:self 
@@ -52,6 +53,7 @@
 {
     // Override point for customization after application launch.
     if(self.viewController.view != nil) {
+        [views addObject:(id)self.viewController.view];
         [self.viewController.view removeFromSuperview];
     }
     self.viewController.view = [[state alloc] 
@@ -86,5 +88,14 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+-(void)previousView
+{
+    [self.viewController.view removeFromSuperview];
+    id previousView = [views lastObject];
+    self.viewController.view = (AppState*)previousView;
+    [views removeLastObject];
+    
+    [self.window addSubview:self.viewController.view];
+    [self.window makeKeyAndVisible];
+}
 @end

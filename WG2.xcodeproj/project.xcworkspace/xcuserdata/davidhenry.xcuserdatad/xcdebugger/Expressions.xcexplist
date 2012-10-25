@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[WeddingList viewWedding:]:WeddingList.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[m_pManager viewController]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate doStateChange:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate previousView]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Wedding setWeddingUrl:]:Wedding.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[WeddingList weddings]:WeddingList.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Gifts Render]:Gifts.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[details objectForKey:@&quot;editable&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppState previousView]:AppState.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppState back]:AppState.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -9,6 +9,7 @@
 #import "AppState.h"
 #import "UIViewWithBorder.h"
 #import "UIRowWithImage.h"
+#import "UIActionButton.h"
 
 @implementation AppState
 UITextField *lastInputElement;
@@ -28,6 +29,7 @@ UITextField *lastInputElement;
         m_pManager = pManager;
         self.userInteractionEnabled = true;
         top = 40;
+        column = 0;
     }
     return self;
 }
@@ -78,20 +80,25 @@ UITextField *lastInputElement;
 }
 -(void) addHeader:(NSString*)header
 {
-    [self addHeader:header withSize:1];
+    [self addHeader:header withSize:1 andBorder:true];
 }
 -(NSInteger) fontSize: (NSInteger)size
 {
     return (7 - size) * 5;
 }
--(NSInteger) topOffset: (NSInteger)size
+-(NSInteger) topOffset: (NSInteger)size withBorder:(bool)border
 {
-    if (size == 1)
-        return 65;
-    else 
+    if(border) {
+        return [self fontSize:size] + 35;
+    } else {
         return [self fontSize:size] + 15;
+    }
 }
 -(void) addHeader: (NSString*)header withSize:(NSInteger)size
+{
+    [self addHeader: header withSize:size andBorder:false];
+}
+-(void) addHeader: (NSString*)header withSize:(NSInteger)size andBorder:(bool)border
 {
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, top, IPHONE_WIDTH, 35)];
     headerLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:[self fontSize:size]]; //[UIFont systemFontOfSize: 30];
@@ -100,13 +107,13 @@ UITextField *lastInputElement;
     headerLabel.backgroundColor = [UIColor clearColor];
     [self addSubview:headerLabel];
     
-    if (size == 1) {
+    if (border) {
         UILabel *borderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, top + 49, IPHONE_WIDTH-20, 2)];
         borderLabel.backgroundColor = [UIColor blackColor];
         [self addSubview:borderLabel];
     }
         
-    top = top + [self topOffset:size];    
+    top = top + [self topOffset:size withBorder:border];
 }
 -(UITextField*)addField:(NSString*)fieldName
 {
@@ -159,18 +166,44 @@ UITextField *lastInputElement;
     
     [self addSubview:button];
     top = top + 50;
+    column = 0;
 }
--(void)addClickableRow:(NSString*)text imageUrl:(NSString*)weddingUrl calling:(SEL)methodName
+-(void)addActionButton:(NSString*)buttonName withImage:(NSString*)imagePath calling:(SEL)methodName
+{
+    UIActionButton *button = [[UIActionButton alloc]
+                              initWithText:buttonName
+                              andImage:imagePath
+                              at: CGPointMake(column * 100 + 20, top)];
+    
+    [button addTouchUpEvent:self action:methodName];
+    
+    [self addSubview:button];
+    
+    column += 1;
+    if( column > 2) {
+        column = 0;
+        top += 100;
+    }
+        
+}
+
+
+-(void)addClickableRow:(NSString*)text imageUrl:(NSString*)imageUrl weddingUrl:(NSString*)weddingUrl calling:(SEL)methodName
 {
     UIRowWithImage *row = [[UIRowWithImage alloc]
-                                initWithFrame:CGRectMake(20, top, IPHONE_WIDTH - 40, 40)
-                                andText:text
-                                andImageUrl:weddingUrl];
+                            initWithFrame:CGRectMake(20, top, IPHONE_WIDTH - 40, 40)
+                            andText:text
+                            andImageUrl:imageUrl
+                            andWeddingUrl:weddingUrl];
     
     [row addTouchUpEvent:self action:methodName];
     
     [self addSubview:row];
     top = top + 39;
+    column = 0;
 }
-
+-(void)previousView
+{
+    [m_pManager previousView];
+}
 @end
