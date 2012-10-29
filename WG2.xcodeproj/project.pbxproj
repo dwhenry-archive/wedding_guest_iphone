@@ -10,10 +10,12 @@
 		1610A650163952B70063CCF1 /* UIActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610A64F163952B70063CCF1 /* UIActionButton.m */; };
 		1610A654163997270063CCF1 /* Gifts.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610A653163997270063CCF1 /* Gifts.m */; };
 		1610A6571639A5A90063CCF1 /* NewGift.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610A6561639A5A90063CCF1 /* NewGift.m */; };
+		1610A65A163B397D0063CCF1 /* floral_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1610A658163B397D0063CCF1 /* floral_bg.jpg */; };
+		1610A65B163B397D0063CCF1 /* gift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1610A659163B397D0063CCF1 /* gift.jpg */; };
+		1610A65E163B519A0063CCF1 /* hotel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1610A65D163B519A0063CCF1 /* hotel.jpg */; };
 		16F7B3981629F341005C5BC2 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B3971629F341005C5BC2 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		16F7B39D162A0E32005C5BC2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B39C162A0E32005C5BC2 /* JSONKit.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
 		16F7B3A0162B1648005C5BC2 /* UIRowWithImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B39F162B1648005C5BC2 /* UIRowWithImage.m */; };
-		16F7B3A2162B5879005C5BC2 /* floral_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16F7B3A1162B5879005C5BC2 /* floral_bg.jpg */; };
 		16F7B3A5162B6DB1005C5BC2 /* Wedding.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F7B3A4162B6DB1005C5BC2 /* Wedding.m */; };
 		16F7B3A8162B7213005C5BC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16F7B3A6162B7202005C5BC2 /* Default-568h@2x.png */; };
 		69BEA15815ECC00300140956 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BEA15715ECC00300140956 /* UIKit.framework */; };
@@ -64,6 +66,9 @@
 		1610A653163997270063CCF1 /* Gifts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gifts.m; sourceTree = "<group>"; };
 		1610A6551639A5A80063CCF1 /* NewGift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGift.h; sourceTree = "<group>"; };
 		1610A6561639A5A90063CCF1 /* NewGift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGift.m; sourceTree = "<group>"; };
+		1610A658163B397D0063CCF1 /* floral_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = floral_bg.jpg; path = images/floral_bg.jpg; sourceTree = "<group>"; };
+		1610A659163B397D0063CCF1 /* gift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gift.jpg; path = images/gift.jpg; sourceTree = "<group>"; };
+		1610A65D163B519A0063CCF1 /* hotel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hotel.jpg; path = images/hotel.jpg; sourceTree = "<group>"; };
 		16F7B3961629F341005C5BC2 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
 		16F7B3971629F341005C5BC2 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
 		16F7B39A1629F36A005C5BC2 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
@@ -71,7 +76,6 @@
 		16F7B39C162A0E32005C5BC2 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = JSONKit/JSONKit.m; sourceTree = "<group>"; };
 		16F7B39E162B1648005C5BC2 /* UIRowWithImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRowWithImage.h; sourceTree = "<group>"; };
 		16F7B39F162B1648005C5BC2 /* UIRowWithImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRowWithImage.m; sourceTree = "<group>"; };
-		16F7B3A1162B5879005C5BC2 /* floral_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floral_bg.jpg; sourceTree = "<group>"; };
 		16F7B3A3162B6DB1005C5BC2 /* Wedding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wedding.h; sourceTree = "<group>"; };
 		16F7B3A4162B6DB1005C5BC2 /* Wedding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wedding.m; sourceTree = "<group>"; };
 		16F7B3A6162B7202005C5BC2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -156,6 +160,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1610A65C163B39820063CCF1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1610A65D163B519A0063CCF1 /* hotel.jpg */,
+				1610A659163B397D0063CCF1 /* gift.jpg */,
+				1610A658163B397D0063CCF1 /* floral_bg.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		69BEA14815ECC00300140956 = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +226,7 @@
 		69BEA15E15ECC00300140956 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				16F7B3A1162B5879005C5BC2 /* floral_bg.jpg */,
+				1610A65C163B39820063CCF1 /* images */,
 				69BEA15F15ECC00300140956 /* WG2-Info.plist */,
 				69BEA16015ECC00300140956 /* InfoPlist.strings */,
 				69BEA16315ECC00300140956 /* main.m */,
@@ -253,16 +267,13 @@
 		69BEA19315ECC0BE00140956 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				1610A68C163C56F30063CCF1 /* wedding */,
 				69BEA19415ECC0BE00140956 /* Login.h */,
 				69BEA19515ECC0BE00140956 /* Login.m */,
 				69FBA71E161B8B7000AEEBAB /* WeddingList.h */,
 				69FBA71F161B8B7000AEEBAB /* WeddingList.m */,
 				16F7B3A3162B6DB1005C5BC2 /* Wedding.h */,
 				16F7B3A4162B6DB1005C5BC2 /* Wedding.m */,
-				1610A652163997270063CCF1 /* Gifts.h */,
-				1610A653163997270063CCF1 /* Gifts.m */,
-				1610A6551639A5A80063CCF1 /* NewGift.h */,
-				1610A6561639A5A90063CCF1 /* NewGift.m */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -391,8 +402,10 @@
 			files = (
 				69BEA16215ECC00300140956 /* InfoPlist.strings in Resources */,
 				69BEA16E15ECC00300140956 /* ViewController.xib in Resources */,
-				16F7B3A2162B5879005C5BC2 /* floral_bg.jpg in Resources */,
 				16F7B3A8162B7213005C5BC2 /* Default-568h@2x.png in Resources */,
+				1610A65A163B397D0063CCF1 /* floral_bg.jpg in Resources */,
+				1610A65B163B397D0063CCF1 /* gift.jpg in Resources */,
+				1610A65E163B519A0063CCF1 /* hotel.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

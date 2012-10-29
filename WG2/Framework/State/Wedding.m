@@ -63,12 +63,12 @@ NSDictionary* details;
     
     [self addHeader:[details objectForKey:@"wedding"]];
     
-    [self addActionButton:@"Details" withImage:@"/details" calling:@selector(action)];
-    [self addActionButton:@"Table" withImage:@"/table" calling:@selector(action)];
-    [self addActionButton:@"Directions" withImage:@"/directions" calling:@selector(action)];
-    [self addActionButton:@"Gift List" withImage:@"/gift_lift" calling:@selector(gifts)];
-    [self addActionButton:@"Hotels" withImage:@"/hotel" calling:@selector(action)];
-    [self addActionButton:@"Taxi" withImage:@"/taxi" calling:@selector(action)];
+    [self addActionButton:@"Details"    withImage:@"" calling:@selector(action)];
+    [self addActionButton:@"Table"      withImage:@"" calling:@selector(action)];
+    [self addActionButton:@"Address"    withImage:@"" calling:@selector(address)];
+    [self addActionButton:@"Gift List"  withImage:@"gift.jpg" calling:@selector(gifts)];
+    [self addActionButton:@"Hotels"     withImage:@"hotel.jpg" calling:@selector(action)];
+    [self addActionButton:@"Taxi"       withImage:@"" calling:@selector(action)];
 
     [self addButton: @"Refresh" calling:@selector(refresh)];
     [self addButton: @"Back" calling:@selector(previousView)];
