@@ -7,8 +7,9 @@
 //
 
 #import "AppState.h"
+#import "ZBarSDK.h"
 
-@interface NewGift : AppState
+@interface NewGift : AppState < ZBarReaderDelegate >
 -(void)setWeddingUrl:(NSString*)weddingUrl andDetails:(id)_details;
 
 @end
